@@ -1,7 +1,6 @@
 ## Overview
 
-[![Deploy to Azure][Deploy Button]][Deploy /]
-test
+[View Sample](/CSharp/cards-RichCards)[![Deploy to Azure][Deploy Button]][Deploy CSharp/RichCards] | [View Sample](/Node/cards-RichCards)[![Deploy to Azure][Deploy Button]][Deploy Node/RichCards]
 
 Bot Builder samples are organized into groups and designed to illustrate task-focused samples in C# and Node.js to help you build great bots!  To use the samples clone our GitHub repository using Git.
 
