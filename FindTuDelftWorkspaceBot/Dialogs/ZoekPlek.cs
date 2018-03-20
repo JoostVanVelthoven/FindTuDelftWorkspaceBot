@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.FormFlow;
+using tuwerkplekkenzoeker;
 
 namespace FindTuDelftWorkspaceBot.Dialogs
 {
@@ -24,9 +25,9 @@ namespace FindTuDelftWorkspaceBot.Dialogs
 
         private static async Task<IDialogContext> OnComplete(IDialogContext context, SandwichOrder state)
         {
-
             await context.PostAsync("Welkom bij QDelft :)");
 
+            var data = Program.Main();
 
             return context;
         }
