@@ -24,7 +24,6 @@ namespace FindTuDelftWorkspaceBot.Dialogs
             string name;
             context.UserData.TryGetValue<string>("Name", out name);
           
-            await context.PostAsync($"Welcome '{name}'");
             if (string.IsNullOrEmpty(name))
             {
                 context.UserData.SetValue<string>("Name", inputMessage.Text);
@@ -44,7 +43,6 @@ namespace FindTuDelftWorkspaceBot.Dialogs
 
             if (string.IsNullOrEmpty(bulding))
             {
-                await context.PostAsync($"Welcome {name}");
 
                 context.UserData.SetValue<string>("bulding", inputMessage.Text);
                 bulding = inputMessage.Text;
