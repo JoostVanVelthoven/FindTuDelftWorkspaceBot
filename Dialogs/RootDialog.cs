@@ -11,12 +11,13 @@ namespace FindTuDelftWorkspaceBot.Dialogs
     {
         public async Task StartAsync(IDialogContext context)
         {
-            await context.PostAsync("Welcome welcome! What is your name?");
             context.Wait(MessageReceivedAsync);
         }
 
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
+            
+
             var inputMessage = await result as Activity;
 
 
@@ -28,6 +29,10 @@ namespace FindTuDelftWorkspaceBot.Dialogs
             {
                 context.UserData.SetValue<string>("Name", inputMessage.Text);
                 name = inputMessage.Text;
+
+
+                await context.PostAsync($"Hi {name}");
+
                 await context.PostAsync("What is your building of choice?");
                 context.Wait(this.MessageReceivedAsync);
                 return;
