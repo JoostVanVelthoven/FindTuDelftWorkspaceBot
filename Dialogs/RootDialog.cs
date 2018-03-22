@@ -20,8 +20,8 @@ namespace FindTuDelftWorkspaceBot.Dialogs
             var inputMessage = await result as Activity;
 
 
-
-            context.UserData.TryGetValue<string>("Name", out string name);
+            string name;
+            context.UserData.TryGetValue<string>("Name", out name);
 
             if (string.IsNullOrEmpty(name))
             {
@@ -30,8 +30,8 @@ namespace FindTuDelftWorkspaceBot.Dialogs
                 await context.PostAsync("What is your building of choice?");
             }
 
-
-            context.UserData.TryGetValue<string>("bulding", out string bulding);
+            string bulding;
+            context.UserData.TryGetValue<string>("bulding", out bulding);
             if (string.IsNullOrEmpty(bulding))
             {
                 context.UserData.SetValue<string>("bulding", inputMessage.Text);
@@ -41,8 +41,9 @@ namespace FindTuDelftWorkspaceBot.Dialogs
 
             }
 
-            context.UserData.TryGetValue<int>("requestedComputers", out int requestedComputers);
-            if (string.IsNullOrEmpty(name))
+            int requestedComputers;
+            context.UserData.TryGetValue<int>("requestedComputers", out requestedComputers);
+            if (requestedComputers != 0)
             {
 
                 if (int.TryParse(inputMessage.Text, out int parsedInput))
