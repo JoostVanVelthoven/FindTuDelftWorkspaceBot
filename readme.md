@@ -31,7 +31,7 @@ https://github.com/JoostVanVelthoven/FindTuDelftWorkspaceBot
 ```
 build.cmd
 ```
-12. Go to back to the portal. Test your bot in the 'Test in Web Chat'-blade. To reset a session use: '/deleteprofile'
+12. Go to back to the portal. Test your bot in the 'Test in Web Chat'-blade. To reset a session use: `/deleteprofile`
 
 13. In the portal go to Channels. Register Skype as a channel.
 14. Open Skype and test the channel.
