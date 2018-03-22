@@ -62,7 +62,6 @@ namespace FindTuDelftWorkspaceBot.Dialogs
                 await context.PostAsync("How many computers do you need?");
                 context.Wait(this.MessageReceivedAsync);
                 return;
-
             }
 
             int requestedComputers;
