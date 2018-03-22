@@ -33,7 +33,7 @@ namespace ApiTestConsole
 
             if(!items.Any())
             {
-                Console.WriteLine("No rooms found");
+                Console.WriteLine("No places found");
             }
             Console.ReadLine();
 

@@ -11,7 +11,7 @@ namespace FindTuDelftWorkspaceBot.Dialogs
     {
         public async Task StartAsync(IDialogContext context)
         {
-            await context.PostAsync("Welcome welcome welcome! What is your name?");
+            await context.PostAsync("Welcome welcome! What is your name?");
             context.Wait(MessageReceivedAsync);
         }
 
@@ -22,31 +22,40 @@ namespace FindTuDelftWorkspaceBot.Dialogs
 
             string name;
             context.UserData.TryGetValue<string>("Name", out name);
-
+          
+            await context.PostAsync($"Welcome '{name}'");
             if (string.IsNullOrEmpty(name))
             {
                 context.UserData.SetValue<string>("Name", inputMessage.Text);
                 name = inputMessage.Text;
                 await context.PostAsync("What is your building of choice?");
+                context.Wait(this.MessageReceivedAsync);
+                return;
             }
+
 
             string bulding;
             context.UserData.TryGetValue<string>("bulding", out bulding);
+
             if (string.IsNullOrEmpty(bulding))
             {
+                await context.PostAsync($"Welcome {name}");
+
                 context.UserData.SetValue<string>("bulding", inputMessage.Text);
                 bulding = inputMessage.Text;
 
                 await context.PostAsync("How many computers do you need?");
+                context.Wait(this.MessageReceivedAsync);
+                return;
 
             }
 
             int requestedComputers;
             context.UserData.TryGetValue<int>("requestedComputers", out requestedComputers);
-            if (requestedComputers != 0)
+            if (requestedComputers == 0)
             {
-
-                if (int.TryParse(inputMessage.Text, out int parsedInput))
+                int parsedInput;
+                if (int.TryParse(inputMessage.Text, out parsedInput))
                 {
                     context.UserData.SetValue<int>("requestedComputers", parsedInput);
                     await context.PostAsync("Please wait :)");
@@ -58,12 +67,15 @@ namespace FindTuDelftWorkspaceBot.Dialogs
                        .ToList()
                        .ForEach(async place => await context.PostAsync($"{place.Location} -  {place.NumberOfAvailableComputers}"));
 
+                    return;
+
                 }
 
 
             }
 
 
+            await context.PostAsync($"No action");
 
         }
     }
