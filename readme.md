@@ -6,7 +6,7 @@
 2. Go to [https://portal.azure.com](https://portal.azure.com)
 3. Create a bot in the portal
 
-![creat the bot](/docs/CreateBot.png "Create a bot")
+![create the bot](/Docs/CreateBot.png "Create a bot")
 
 
 
