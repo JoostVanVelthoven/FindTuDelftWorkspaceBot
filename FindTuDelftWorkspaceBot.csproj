@@ -132,7 +132,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TuDelft.Api\TuDelft.Api.csproj">
+    <ProjectReference Include="TuDelft.Api\TuDelft.Api.csproj">
       <Project>{6a042ec6-82b3-4a03-a7a3-801e33da759e}</Project>
       <Name>TuDelft.Api</Name>
     </ProjectReference>

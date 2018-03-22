@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindTuDelftWorkspaceBot", "FindTuDelftWorkspaceBot\FindTuDelftWorkspaceBot.csproj", "{99912E45-E841-4D83-BB62-07C1E5F65E23}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuDelft.Api", "TuDelft.Api\TuDelft.Api.csproj", "{6A042EC6-82B3-4A03-A7A3-801E33DA759E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindTuDelftWorkspaceBot", "FindTuDelftWorkspaceBot.csproj", "{99912E45-E841-4D83-BB62-07C1E5F65E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A042EC6-82B3-4A03-A7A3-801E33DA759E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A042EC6-82B3-4A03-A7A3-801E33DA759E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A042EC6-82B3-4A03-A7A3-801E33DA759E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A042EC6-82B3-4A03-A7A3-801E33DA759E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99912E45-E841-4D83-BB62-07C1E5F65E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
