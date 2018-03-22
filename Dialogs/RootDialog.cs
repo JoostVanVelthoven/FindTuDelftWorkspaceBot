@@ -75,13 +75,7 @@ namespace FindTuDelftWorkspaceBot.Dialogs
                     context.UserData.SetValue<int>("requestedComputers", parsedInput);
                     await context.PostAsync("Please wait :)");
 
-                    TuDelftWorkspace.Get()
-                       .Take(30)
-                       .Where(a => a.Location.Contains(bulding))
-                       .Where(a => a.NumberOfAvailableComputers >= parsedInput)
-                       .ToList()
-                       .ForEach(async place => await context.PostAsync($"{place.Location} -  {place.NumberOfAvailableComputers}"));
-
+                   
                     return;
 
                 }
