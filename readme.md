@@ -1,7 +1,7 @@
 # Azure chatbot with TU Delft API
 
 ## Goal
-Create a multi channel chatbot. The bot ask your name, your building and the number of requested places. To answer the user the bot uses the Tu-Delft web REST api. 
+Create a multi channel chatbot. The bot ask your name, your building and the number of requested places. To answer the user the bot uses the Tu-Delft web REST API. 
 
 
 ## Steps   
@@ -13,7 +13,7 @@ Create a multi channel chatbot. The bot ask your name, your building and the num
 
 ![create the bot](/Docs/CreateBot.png "Create a bot")
 
-4. Choise a name for the bot and create the bot. (Auto generate keys is highly recommend) 
+4. Choice a name for the bot and create the bot. (Auto generate keys is highly recommend) 
 5. Go to your bot 'blade' by  Bot Services and select your bot.
 6. Go to build and open online editor
 
@@ -26,7 +26,7 @@ Create a multi channel chatbot. The bot ask your name, your building and the num
 https://github.com/JoostVanVelthoven/FindTuDelftWorkspaceBot  
 ```
 9. Go to the explorer-tab and change /dialog/RootDialog.cs
-10. Ask the user his name, his disered building and the number of required workplaces.
+10. Ask the user his name, his desired building and the number of required workplaces. Repost the users input. 
 11. Open the console tab and build the app by running the command:
 ```
 build.cmd
@@ -38,7 +38,7 @@ build.cmd
 
 ![Skype](/Docs/Skype.png "Skype")
 
-15. Now it's time to use the TU-Delft API! Because debugging Microsoft bots is time consumming we use a test console application.  Download the source from this repo.  (Because of time limitations, the REST api is already implemented in the solution). Try to filter the data. 
-17. With this expirince, it is time to implement the API in the bot. Migrate all the code from the console to the bot. (Off course using the online editor) 
+15. Now it's time to use the TU-Delft API! Because debugging Microsoft bots is time consuming we use a test console application.  Download the source from this repo.  (Because of time limitations, the REST API is already implemented in the solution). Try to filter the data. 
+17. With this experience, it is time to implement the API in the bot. Migrate all the code from the console to the bot. (Off course using the online editor) 
 18. Done!
-
+ 
