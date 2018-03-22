@@ -50,38 +50,7 @@ namespace FindTuDelftWorkspaceBot.Dialogs
             }
 
 
-            string bulding;
-            context.UserData.TryGetValue<string>("bulding", out bulding);
-
-            if (string.IsNullOrEmpty(bulding))
-            {
-
-                context.UserData.SetValue<string>("bulding", inputMessage.Text);
-                bulding = inputMessage.Text;
-
-                await context.PostAsync("How many computers do you need?");
-                context.Wait(this.MessageReceivedAsync);
-                return;
-
-            }
-
-            int requestedComputers;
-            context.UserData.TryGetValue<int>("requestedComputers", out requestedComputers);
-            if (requestedComputers == 0)
-            {
-                int parsedInput;
-                if (int.TryParse(inputMessage.Text, out parsedInput))
-                {
-                    context.UserData.SetValue<int>("requestedComputers", parsedInput);
-                    await context.PostAsync("Please wait :)");
-
-                   
-                    return;
-
-                }
-
-
-            }
+            //TODO add more questions
 
 
             await context.PostAsync($"No action");
