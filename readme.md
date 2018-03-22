@@ -1,8 +1,13 @@
+# Azure chatbot with TU Delft API
+
+1. [Create a Azure account](https://azure.microsoft.com/en-us/free/students/) ([More info](Docs/Manual_azure_student_account.pdf))
+
+
+2. Go to [https://portal.azure.com](https://portal.azure.com)
+3. Create a bot in the portal
+
+![creat the bot](/docs/CreateBot.png "Create a bot")
 
 
 
-[![Deploy to Azure][Deploy Button]][Deploy CSharp/QDelft] 
 
-
-[Deploy Button]: https://azuredeploy.net/deploybutton.png
-[Deploy CSharp/QDelft]: https://azuredeploy.net?repository=https://github.com/JoostVanVelthoven/FindTuDelftWorkspaceBot/blob/master/
