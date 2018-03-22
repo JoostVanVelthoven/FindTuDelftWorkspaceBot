@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
-using tuwerkplekkenzoeker;
+using TuDelft.Api;
 using System.Linq;
 namespace FindTuDelftWorkspaceBot.Dialogs
 {
@@ -13,7 +13,6 @@ namespace FindTuDelftWorkspaceBot.Dialogs
         {
             await context.PostAsync("Welke locatie zoekt u!");
             context.Wait(MessageReceivedAsync);
-
         }
 
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
@@ -33,7 +32,6 @@ namespace FindTuDelftWorkspaceBot.Dialogs
                 .Take(10)
                 .ToList()
                 .ForEach(async place => await context.PostAsync($"{place.Location} -  {place.NumberOfAvailableComputers}"));
-
 
         }
     }

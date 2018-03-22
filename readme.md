@@ -1,5 +1,10 @@
 # Azure chatbot with TU Delft API
 
+## Goal
+Create a multi channel chatbot. The bot ask your name, your building and the number of requested places. To answer the user the bot uses the Tu-Delft web REST api. 
+
+
+## Steps   
 1. [Create a Azure account](https://azure.microsoft.com/en-us/free/students/) ([More info](Docs/Manual_azure_student_account.pdf))
 
 
@@ -26,4 +31,14 @@ https://github.com/JoostVanVelthoven/FindTuDelftWorkspaceBot
 ```
 build.cmd
 ```
-12. 
+12. Go to back to the portal. Test your bot in the 'Test in Web Chat'-blade.
+
+13. In the portal go to Channels. Register Skype as a channel.
+14. Open Skype and test the channel.
+
+![Skype](/Docs/Skype.png "Skype")
+
+15. Now it's time to use the TU-Delft API! Because debugging Microsoft bots is time consumming we use a test console application.  Download the source from this repo.  (Because of time limitations, the REST api is already implemented in the solution). Try to filter the data. 
+17. With this expirince, it is time to implement the API in the bot. Migrate all the code from the console to the bot. (Off course using the online editor) 
+18. Done!
+

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace tuwerkplekkenzoeker
+namespace TuDelft.Api
 {
     public class JsonHelper
     {

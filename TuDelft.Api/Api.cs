@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace tuwerkplekkenzoeker
+namespace TuDelft.Api
 {
     public static class TuDelftWorkspace
     {
