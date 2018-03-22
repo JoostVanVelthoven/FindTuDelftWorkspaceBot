@@ -15,11 +15,11 @@ namespace TuDelft.Api
                 string jsonFromApi = webClient.DownloadString(url);
                 try
                 {
-                    RootObject ff = JsonConvert.DeserializeObject<RootObject>(jsonFromApi);
+                    RootObject json = JsonConvert.DeserializeObject<RootObject>(jsonFromApi);
 
-                    return ff?.getWerkplekBeschikbaarheidByLocatieCodeResponse?
-                   .computerRuimteInformatieLijst?
-                   .computerRuimteInformatie.Select(a =>
+                    return json?.getWerkplekBeschikbaarheidByLocatieCodeResponse?
+                       .computerRuimteInformatieLijst?
+                       .computerRuimteInformatie.Select(a =>
                     new Workplace
                     {
                         Location = a.ruimte.ruimteLocatie.naamEN + " - " + a.ruimte.naamEN,
@@ -30,7 +30,6 @@ namespace TuDelft.Api
                 }
                 catch
                 {
-                    Console.WriteLine(id);
                     return null;
                 }
 

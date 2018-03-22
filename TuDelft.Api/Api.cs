@@ -8,7 +8,7 @@ namespace TuDelft.Api
     {
         public static List<Workplace> Get()
         {
-            return Enumerable.Range(0, 100)
+            return Enumerable.Range(0, 50)
                  .AsParallel()
                  .Select(JsonHelper.Load)
                  .Where(a => a != null)
