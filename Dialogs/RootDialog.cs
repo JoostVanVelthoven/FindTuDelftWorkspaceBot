@@ -16,7 +16,17 @@ namespace FindTuDelftWorkspaceBot.Dialogs
 
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
-            
+            bool first;
+            context.UserData.TryGetValue<bool>("first", out first);
+            if (!first)
+            {
+                context.UserData.SetValue<bool>("first", true);
+                await context.PostAsync($"What is your name?");
+                context.Wait(this.MessageReceivedAsync);
+                return;
+            }
+
+
 
             var inputMessage = await result as Activity;
 
