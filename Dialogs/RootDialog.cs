@@ -2,30 +2,39 @@
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
-
+using tuwerkplekkenzoeker;
+using System.Linq;
 namespace FindTuDelftWorkspaceBot.Dialogs
 {
     [Serializable]
     public class RootDialog : IDialog<object>
     {
-        public Task StartAsync(IDialogContext context)
+        public async Task StartAsync(IDialogContext context)
         {
+            await context.PostAsync("Welke locatie zoekt u!");
             context.Wait(MessageReceivedAsync);
 
-            return Task.CompletedTask;
         }
 
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
-            var activity = await result as Activity;
+            var inputMessage = await result as Activity;
+            string location;
 
-            // calculate something for us to return
-            int length = (activity.Text ?? string.Empty).Length;
+            context.UserData.TryGetValue<string>("Name", out location);
 
-            // return our reply to the user
-            await context.PostAsync($"You sent {activity.Text} which was {length} characters");
+            if(string.IsNullOrEmpty(location))
+            {
+                context.UserData.SetValue<string>("Name", inputMessage.Text);
+                location = inputMessage.Text;
+            }
 
-            context.Wait(MessageReceivedAsync);
+            TuDelftWorkspace.Get()
+                .Take(10)
+                .ToList()
+                .ForEach(async place => await context.PostAsync($"{place.Location} -  {place.NumberOfAvailableComputers}"));
+
+
         }
     }
 }

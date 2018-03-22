@@ -44,8 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Api.cs" />
+    <Compile Include="Json\BinnenlandsAdres.cs" />
+    <Compile Include="Json\ComputerGebruik.cs" />
+    <Compile Include="Json\ComputerRuimteInformatie.cs" />
+    <Compile Include="Json\ComputerRuimteInformatieLijst.cs" />
+    <Compile Include="Json\FysiekAdres.cs" />
+    <Compile Include="Json\GetWerkplekBeschikbaarheidByLocatieCodeResponse.cs" />
+    <Compile Include="JsonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Json\RootObject.cs" />
+    <Compile Include="Json\Ruimte.cs" />
+    <Compile Include="Json\Ruimte2.cs" />
+    <Compile Include="Json\RuimteLocatie.cs" />
+    <Compile Include="Json\SingleOrArrayConverter.cs" />
+    <Compile Include="Json\Workplace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
