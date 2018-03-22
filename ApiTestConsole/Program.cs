@@ -20,10 +20,10 @@ namespace ApiTestConsole
             int requestedComputers = Convert.ToInt32(Console.ReadLine());
 
             //TU rest api will be managed by this code.
-            var items = TuDelftWorkspace.Get()
-                       .Take(30)
-                       .Where(a => a.Location.Contains(bulding))
-                       .Where(a => a.NumberOfAvailableComputers >= requestedComputers)
+
+            //TODO add filtering
+
+            var items = TuDelftWorkspace.Get()                                            
                        .ToList();
                 
             foreach(var item in items)
