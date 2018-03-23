@@ -44,8 +44,7 @@ namespace FindTuDelftWorkspaceBot.Dialogs
 
                 await context.PostAsync($"Hi {name}");
 
-                await context.PostAsync("What is your building of choice?");
-                context.Wait(this.MessageReceivedAsync);
+             
                 return;
             }
 
