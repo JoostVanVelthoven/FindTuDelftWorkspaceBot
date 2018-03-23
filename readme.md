@@ -5,6 +5,8 @@ Create a multi channel chatbot. The bot ask your name, your building and the num
 
 
 ## Steps   
+### Phase 1: install the demo bot and test!
+
 1. [Create a Azure account](https://azure.microsoft.com/en-us/free/students/) ([More info](Docs/Manual_azure_student_account.pdf))
 
 
@@ -25,6 +27,10 @@ Create a multi channel chatbot. The bot ask your name, your building and the num
 ```
 https://github.com/JoostVanVelthoven/FindTuDelftWorkspaceBot  
 ```
+
+### Phase 2: Ask more questions to your users
+
+
 9. Go to the explorer-tab and change /dialog/RootDialog.cs
 10. Ask the user his name, his desired building and the number of required workplaces. Repost the users input. 
 11. Open the console tab and build the app by running the command:
@@ -38,7 +44,12 @@ build.cmd
 
 ![Skype](/Docs/Skype.png "Skype")
 
+###Phase 4: Explore the API
+
+
 15. Now it's time to use the TU-Delft API! Because debugging Microsoft bots is time consuming we use a test console application (`ApiTestConsole`).  Download the source from this repo.  (Because of time limitations, the REST API is already implemented in the solution). Try to filter the data. 
+
+###Phase 4: Integrate API and bot
 17. With this experience, it is time to implement the API in the bot. Migrate all the code from the console to the bot. (Off course using the online editor) 
 18. Done!
  
