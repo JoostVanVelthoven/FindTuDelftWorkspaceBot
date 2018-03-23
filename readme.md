@@ -44,12 +44,12 @@ build.cmd
 
 ![Skype](/Docs/Skype.png "Skype")
 
-###Phase 4: Explore the API
+### Phase 3: Explore the API
 
 
 15. Now it's time to use the TU-Delft API! Because debugging Microsoft bots is time consuming we use a test console application (`ApiTestConsole`).  Download the source from this repo.  (Because of time limitations, the REST API is already implemented in the solution). Try to filter the data. 
 
-###Phase 4: Integrate API and bot
+### Phase 4: Integrate API and bot
 17. With this experience, it is time to implement the API in the bot. Migrate all the code from the console to the bot. (Off course using the online editor) 
 18. Done!
  
